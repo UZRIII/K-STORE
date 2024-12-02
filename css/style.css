@@ -1,0 +1,256 @@
+section {
+    /* background-color: burlywood; */
+    background-image: url("https://i.postimg.cc/SKsVgLBn/young-woman-wearing-fashionable-clothes.jpg");
+    /* background-image: url("../Img/thoughtful-pretty-blonde-young-woman-standing-against-peach-colored-backdrop.jpg"); */
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section .headFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+section .headFlex .headText {
+    width: auto !important;
+}
+
+section .headFlex .headText .h1Head {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+section .headFlex .headText .h1Head h1:first-of-type {
+    background-color: #fff;
+    padding: 5px 15px;
+    /* width: max-content; */
+}
+
+section .headFlex .headText .pHead {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+section .headFlex .headText .spanHead {
+    line-height: 1.5;
+}
+
+section .headFlex .headText .spanHead p {
+    margin-bottom: 30px;
+}
+
+section .headFlex .headText .spanHead button {
+    font-size: 18px;
+}
+
+section .headFlex .headImg {
+    display: flex;
+    width: 50%;
+}
+
+section .headFlex .headImg img {
+    max-width: 100%;
+}
+
+/* Trust Bar */
+
+.trustIcon {
+    background-color: #e5d969;
+}
+
+.trustIcon .trustFlex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trustIcon .trustFlex img, .trustIcon .trustFlex svg {
+    height: 52px;
+    margin: 0 20px;
+}
+
+.trustIcon .trustFlex img.moreH {
+    height: 76px;
+}
+
+.trustIcon .trustFlex img.lessH {
+    height: 42px;
+}
+
+/* Spacial Icons */
+
+.spacialProduct {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.spacialProduct .spacialFlex {
+    width: 100%;
+}
+
+.spacialProduct .spacialFlex .spacialText {
+    margin-bottom: 50px;
+}
+
+.spacialProduct .spacialFlex .spacialText h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.spacialProduct .spacialFlex .spacialIcons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 أعمدة */
+    gap: 20px; /* المسافة بين الأعمدة */
+    align-items: center; /* توسيط العناصر عموديًا */
+    justify-items: center; /* توسيط العناصر أفقيًا */
+}
+
+.spacialProduct .spacialFlex .spacialIcons .sIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 0;
+    background-color: #fff;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    /* width: 100%; */
+    padding: 30px 0;
+    width: 200px;
+    height: 200px;
+    /* box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.spacialProduct .spacialFlex .spacialIcons .sIcon:hover {
+    box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.spacialProduct .spacialFlex .spacialIcons .sIcon img {
+    width: 64px;
+}
+
+.spacialProduct .spacialFlex .spacialIcons .sIcon p {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+
+/* Arrivals Carts */
+
+/* .arrivals {
+    padding-top: 75px !important;
+} */
+
+.arrivalsFlex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 50px;
+}
+
+.arrivalsFlex .arrivalsCart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrivalsFlex .arrivalsCart .imgFrame {
+    max-height: 480px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.arrivalsFlex .arrivalsCart .imgFrame:hover img {
+    filter: saturate(120%);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-filter: saturate(120%);
+}
+
+.arrivalsFlex .arrivalsCart img {
+    min-height: 320px;
+    max-width: 100%;
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText:hover i {
+    color: var(--black);
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText .arrivalsText h3 {
+    margin-bottom: 7.5px;
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText a {
+    display: contents;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText a .arrivalsText p {
+    color: rgb(107 114 128);
+}
+
+.arrivalsFlex .arrivalsCart .arrivalsCartText a i {
+    color: rgb(107 114 128);
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+/* Contact Us */
+
+.contact {
+    padding: 100px 0;
+    color: #fff;
+    background-color: #e5d969;
+    text-align: center;
+}
+
+.contact .contactFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 25px 0;
+}
+
+.contact .contactFlex p {
+    max-width: 80%;
+    font-size: 18px;
+}
+
+.contact .contactFlex button {
+    font-size: 22px;
+    padding: 15px 50px;
+}
