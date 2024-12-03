@@ -102,10 +102,10 @@ body.no-scroll {
     height: 100%;
 }
 
-.navBar header .flexHeader .headerList .listWidth {
+/* transform: translate(-100%);
+visibility: hidden; */
+/* .navBar header .flexHeader .headerList .listWidth {
     position: absolute;
-    /* transform: translate(-100%);
-    visibility: hidden; */
     z-index: 3;
     left: 0;
     top: 100%;
@@ -118,7 +118,25 @@ body.no-scroll {
     display: none;
     transition: all 0.3s ease-in-out;
     height: 100%;
+} */
+
+.navBar header .flexHeader .headerList .listWidth {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 100%;
+    width: 60%;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* استخدام calc لتحديد الارتفاع بناءً على ارتفاع الشاشة وارتفاع الـ nav */
+    min-height: calc(100vh - var(--nav-height, 0px)); /* الطول مع استبعاد ارتفاع الـ nav */
+    border-right: 1px solid var(--navBorder);
+    display: none;
+    transition: all 0.3s ease-in-out;
+    height: calc(100vh - var(--nav-height, 0px)); /* الطول الفعلي بعد خصم الـ nav */
 }
+
 
 .navBar header .flexHeader .headerList .listWidth.open {
     display: block;
@@ -144,6 +162,7 @@ body.no-scroll {
 .navBar header .flexHeader .headerList .listWidth .list .listLinks {
     text-transform: uppercase;
     padding: 2.2rem 0;
+    padding-bottom: 0;
 }
 
 .navBar header .flexHeader .headerList .listWidth .list .listLinks h2 {

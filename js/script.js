@@ -99,4 +99,19 @@ document.addEventListener("click", (e) => {
 
 
 
+function updateDynamicHeights() {
+    const viewportHeight = window.innerHeight; // الارتفاع المتاح في الشاشة
+    const nav = document.querySelector(".navBar"); // استهداف الـ nav
+    const navHeight = nav ? nav.offsetHeight : 0; // ارتفاع الـ nav (بار الكروم إذا كان ظاهرًا)
+
+    // تحديث قيم CSS ديناميكيًا
+    document.documentElement.style.setProperty('--nav-height', `${navHeight}px`); // تعيين ارتفاع الـ nav
+}
+
+// تحديث القيم عند تغيير الحجم أو التمرير
+window.addEventListener('resize', updateDynamicHeights);
+window.addEventListener('orientationchange', updateDynamicHeights);
+
+// استدعاء أولي لتطبيق القيم
+updateDynamicHeights();
 
