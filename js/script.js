@@ -104,8 +104,15 @@ function updateDynamicHeights() {
     const nav = document.querySelector(".navBar"); // استهداف الـ nav
     const navHeight = nav ? nav.offsetHeight : 0; // ارتفاع الـ nav (بار الكروم إذا كان ظاهرًا)
 
+    // فحص إذا كان شريط البحث في الكروم ظاهرًا (الارتفاع يقل عندما يظهر شريط البحث)
+    const hasAddressBar = (window.outerHeight - window.innerHeight) > 100;
+
+    // إذا كان شريط البحث ظاهرًا، نخصم ارتفاعه
+    const effectiveHeight = hasAddressBar ? viewportHeight - 56 : viewportHeight; // تعديل للارتفاع بناءً على حالة ظهور شريط البحث
+
     // تحديث قيم CSS ديناميكيًا
     document.documentElement.style.setProperty('--nav-height', `${navHeight}px`); // تعيين ارتفاع الـ nav
+    document.documentElement.style.setProperty('--effective-height', `${effectiveHeight}px`); // تعيين الارتفاع الفعلي
 }
 
 // تحديث القيم عند تغيير الحجم أو التمرير
