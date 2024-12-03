@@ -27,7 +27,7 @@ section .headFlex .headText .h1Head {
 }
 
 section .headFlex .headText .h1Head h1:first-of-type {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 5px 15px;
     /* width: max-content; */
 }
@@ -121,7 +121,7 @@ section .headFlex .headImg img {
     align-items: center;
     justify-content: center;
     gap: 10px 0;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -232,7 +232,7 @@ section .headFlex .headImg img {
 
 .contact {
     padding: 100px 0;
-    color: #fff;
+    color: var(--white);
     background-color: #e5d969;
     text-align: center;
 }

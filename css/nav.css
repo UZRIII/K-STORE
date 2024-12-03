@@ -8,7 +8,7 @@ body.no-scroll {
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: var(--white);
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     z-index: 1000;
 }
@@ -43,6 +43,7 @@ body.no-scroll {
     border-bottom: 1px solid var(--navBorder);
     text-transform: capitalize;
     position: relative;
+    z-index: 5;
 }
 
 .navBar header .flexHeader {
@@ -111,29 +112,13 @@ visibility: hidden; */
     top: 100%;
     width: 60%;
     padding: 0;
-    background-color: #fff;
+    background-color: var(--white);
     overflow-x: hidden;
     min-height: calc(100vh - (100% + 41px));
     border-right: 1px solid var(--navBorder);
     display: none;
     transition: all 0.3s ease-in-out;
     height: 100%;
-} */
-
-/* .navBar header .flexHeader .headerList .listWidth {
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    top: 100%;
-    width: 60%;
-    padding: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    min-height: calc(100vh - var(--nav-height, 0px)); 
-    border-right: 1px solid var(--navBorder);
-    display: none;
-    transition: all 0.3s ease-in-out;
-    height: calc(100vh - var(--nav-height, 0px));
 } */
 
 .navBar header .flexHeader .headerList .listWidth {
@@ -143,7 +128,7 @@ visibility: hidden; */
     top: 100%;
     width: 60%;
     padding: 0;
-    background-color: #fff;
+    background-color: var(--white);
     overflow-x: hidden;
     /* استخدام --effective-height بدلاً من 100vh */
     min-height: calc(var(--effective-height, 100vh) - var(--nav-height, 0px)); /* الطول مع استبعاد ارتفاع الـ nav */
